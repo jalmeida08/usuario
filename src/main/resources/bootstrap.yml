@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: usuario
+  profiles:
+    active: ${PROFILE}
+  cloud:
+    config:
+      uri: "${PROTOCOLO}://${CONFIG_SERVER_URL}:${CONFIG_SERVER_PORT}"

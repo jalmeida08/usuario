@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: "${PROTOCOLO}://${EUREKA_SERVER_URL}:${EUREKA_SERVER_PORT}/eureka"
+  instance:
+    prefer-ip-address: true
+    ip-address: ${IP_CONTAINER}
+    instance-id: "${IP_CONTAINER}:${server.port}"
+    
+security:
+  oauth2:
+    resource:
+      user-info-uri: "${PROTOCOLO}://${OAUTH_URL}:${OAUTH_PORT}/user"
+      
