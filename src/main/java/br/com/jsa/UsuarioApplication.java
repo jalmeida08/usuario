@@ -12,9 +12,11 @@ import org.springframework.web.client.RestTemplate;
 
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableFeignClients
+@EnableSwagger2
 public class UsuarioApplication {
 
 	@Bean

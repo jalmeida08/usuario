@@ -61,9 +61,11 @@ public class UsuarioService {
 	}
 	
 	public Usuario getUsuarioPorId(String id) {
+		 boolean isPresent = usuarioRepository
+			.findById(id).isPresent();
 		return usuarioRepository
 				.findById(id)
-				.orElseThrow(() -> new RuntimeException());
+				.orElseThrow(() -> new IllegalArgumentException());
 	}
 	
 	public Optional<Usuario> buscarPorEmail(String email) {
@@ -95,5 +97,4 @@ public class UsuarioService {
 			.collect(Collectors.toList()));
 		usuarioRepository.save(u);
 	}
-
 }

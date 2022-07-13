@@ -23,8 +23,9 @@ public class AcessoService {
 				.orElseThrow(() -> new ParametroException());
 	}
 	
-	public void adicionaAcesso(Acesso a) {
-		acessoRepository.save(a);
+	public AcessoDTO adicionaAcesso(Acesso a) {
+		var acesso = acessoRepository.save(a);
+		return new AcessoDTO(acesso);
 	}
 	
 	public List<AcessoDTO> listaAcesso(){

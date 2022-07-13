@@ -1,5 +1,6 @@
 package br.com.jsa.api.controller;
 
+import java.net.URI;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -33,8 +34,8 @@ public class AcessoController {
 	@PostMapping
 	@Transactional
 	public ResponseEntity<?> adicionaAcesso(@RequestBody AcessoForm acessoForm) {
-		acessoService.adicionaAcesso(acessoForm.toAcesso());
-		return ResponseEntity.ok().build();
+		var dto = acessoService.adicionaAcesso(acessoForm.toAcesso());
+		return ResponseEntity.created(URI.create(dto.getId())).build();
 	}
 	
 	@GetMapping

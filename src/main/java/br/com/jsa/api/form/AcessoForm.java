@@ -9,7 +9,7 @@ public class AcessoForm {
 	
 	public Acesso toAcesso() {
 		var a = new Acesso();
-		a.setNome(nome);
+		a.setNome(nome.toUpperCase());
 		a.setDescricao(descricao);
 		return a;
 	}

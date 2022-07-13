@@ -57,4 +57,13 @@ public class UsuarioForm {
 		this.senha = senha;
 	}
 
+	@Override
+	public String toString() {
+		return "UsuarioForm{" +
+				"nome='" + nome + '\'' +
+				", dataNascimento=" + dataNascimento +
+				", email='" + email + '\'' +
+				", senha='" + senha + '\'' +
+				'}';
+	}
 }
