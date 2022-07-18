@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>br.com.jsa</groupId>
 	<artifactId>usuario</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<name>usuario</name>
 	<description>Microserviço de usuario</description>
 	<properties>
