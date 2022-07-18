@@ -21,6 +21,7 @@ public class Usuario implements Serializable {
 	private String clienteId;
 	private String email;
 	private String senha;
+	private String chavePendenciaAlteracaoDadoUsuario;
 	private boolean ativo;
 	@DBRef
 	private List<Acesso> acesso = new ArrayList<Acesso>();
@@ -77,6 +78,14 @@ public class Usuario implements Serializable {
 
 	public String getId() {
 		return id;
+	}
+
+	public String getChavePendenciaAlteracaoDadoUsuario() {
+		return chavePendenciaAlteracaoDadoUsuario;
+	}
+
+	public void setChavePendenciaAlteracaoDadoUsuario(String chavePendenciaAlteracaoDadoUsuario) {
+		this.chavePendenciaAlteracaoDadoUsuario = chavePendenciaAlteracaoDadoUsuario;
 	}
 
 	public Long getVersao() {

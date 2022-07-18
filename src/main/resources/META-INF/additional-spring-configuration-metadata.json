@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "app.kafka.cadastro-basico.novo-usuario-funcionario.topic",
+    "type": "java.lang.String",
+    "description": "A description for 'app.kafka.cadastro-basico.novo-usuario-funcionario.topic'"
+  },
+  {
+    "name": "app.kafka.email.topic",
+    "type": "java.lang.String",
+    "description": "A description for 'app.kafka.email.topic'"
+  }
+]}
