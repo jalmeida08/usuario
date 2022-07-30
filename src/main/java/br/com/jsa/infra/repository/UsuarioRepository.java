@@ -11,5 +11,7 @@ import br.com.jsa.infra.model.Usuario;
 public interface UsuarioRepository extends MongoRepository<Usuario, String>{
 	
 	public Optional<Usuario> findByEmail(String email);
+	
+	public Optional<Usuario> findByChavePendenciaAlteracaoDadoUsuario(String chaveAtivacao);
 
 }

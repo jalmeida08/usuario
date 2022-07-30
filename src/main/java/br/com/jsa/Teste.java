@@ -4,6 +4,7 @@ public class Teste {
 	
 	public static void main(String[] args) {
 		
+		
 //		var lst = List.of("Ana Clara", "Mirele", "Jefferson", "Manoel", "Rita");
 //		
 ////		lst.forEach((String t) -> System.out.println(t));

@@ -41,11 +41,17 @@ security:
 
 app:
   kafka:
-    cadastro-basico:
-      novo-usuario-funcionario:
-        topic: cadastroBasico_novoFuncionario
-    email:
-      topic: usuario_novoUsuarioFuncionario
+    consumer:
+      cadastro-basico:
+        novo-usuario-funcionario:
+          topic: CADASTROBASICO_NOVO_FUNCIONARIO
+    producer:
+      usuario:
+        novo-usuario-funcionario:
+          topic: USUARIO_NOVO_USUARIO_FUNCINARIO
+        erro-novo-usuario-funcionario:
+          topic: USUARIO_ERRO_NOVO_USUARIO
 
     
+
 

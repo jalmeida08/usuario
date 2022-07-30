@@ -1,7 +1,6 @@
 package br.com.jsa.infra.config.security;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -18,8 +17,7 @@ public class ResourceServerConfigure extends ResourceServerConfigurerAdapter {
 		http.sessionManagement()
     	.sessionCreationPolicy(SessionCreationPolicy.NEVER)
 			.and().authorizeRequests()
-			.antMatchers(HttpMethod.POST, "/funcionario").permitAll()
-            .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+            .antMatchers("/funcionario/publico/**").permitAll()// ACESSO PUBLICO PARA SEM AUTENTICACAO
             .antMatchers("/swagger**").permitAll()
             .antMatchers("/springfox**").permitAll()
             .antMatchers("/v2/api-docs").permitAll()
