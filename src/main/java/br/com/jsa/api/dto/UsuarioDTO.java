@@ -3,18 +3,18 @@ package br.com.jsa.api.dto;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import br.com.jsa.infra.model.Usuario;
+import br.com.jsa.dominio.model.Usuario;
 
-public class UsuarioFuncionarioDTO {
+public class UsuarioDTO {
 	
 	private String id;
-	private String funcionarioId;
+	private String pessoaId;
 	private String email;
 	private List<AcessoDTO> acesso;
 	
-	public UsuarioFuncionarioDTO(Usuario u) {
+	public UsuarioDTO(Usuario u) {
 		this.id = u.getId();
-		this.funcionarioId = u.getFuncionarioId();
+		this.pessoaId = u.getPessoaId();
 		this.email = u.getEmail();
 		this.acesso = u.getAcesso().stream().map(AcessoDTO::new).collect(Collectors.toList());
 	}
@@ -22,8 +22,8 @@ public class UsuarioFuncionarioDTO {
 	public String getId() {
 		return id;
 	}
-	public String getFuncionarioId() {
-		return funcionarioId;
+	public String getPessoaId() {
+		return pessoaId;
 	}
 	public String getEmail() {
 		return email;

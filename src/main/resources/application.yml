@@ -42,14 +42,14 @@ security:
 app:
   kafka:
     consumer:
-      cadastro-basico:
-        novo-usuario-funcionario:
-          topic: CADASTROBASICO_NOVO_FUNCIONARIO
+      studio:
+        novo-funcionario:
+          topic: STUDIO_NOVO_FUNCIONARIO
     producer:
       usuario:
-        novo-usuario-funcionario:
-          topic: USUARIO_NOVO_USUARIO_FUNCINARIO
-        erro-novo-usuario-funcionario:
+        novo-usuario:
+          topic: USUARIO_NOVO_USUARIO
+        erro-novo-usuario:
           topic: USUARIO_ERRO_NOVO_USUARIO
 
     

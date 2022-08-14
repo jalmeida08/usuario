@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.jsa.api.dto.AcessoDTO;
+import br.com.jsa.dominio.model.Acesso;
+import br.com.jsa.dominio.repository.AcessoRepository;
 import br.com.jsa.infra.exception.ParametroException;
-import br.com.jsa.infra.model.Acesso;
-import br.com.jsa.infra.repository.AcessoRepository;
 
 @Service
 public class AcessoService {

@@ -4,7 +4,7 @@ import javax.validation.constraints.NotBlank;
 
 import org.hibernate.validator.constraints.Length;
 
-public class DadosPrimeiroAcessoUsuarioFuncionarioForm {
+public class DadosPrimeiroAcessoUsuarioForm {
 	
 	@NotBlank(message = "E-mail obrigatório")
 	private String email;

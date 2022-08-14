@@ -2,16 +2,27 @@ package br.com.jsa.api.dto;
 
 import java.time.LocalDate;
 
-public class FuncionarioForm {
 
+public class PessoaDTO {
+
+	private String id;
 	private String nome;
 	private LocalDate dataNascimento;
-
-	public FuncionarioForm() {}
 	
-	public FuncionarioForm(String nome, LocalDate dataNascimento) {
+	public PessoaDTO() {}
+	
+	public PessoaDTO(String id, String nome, LocalDate dataNascimento) {
+		this.id = id;
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getNome() {
@@ -29,7 +40,6 @@ public class FuncionarioForm {
 	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
-
 	
 	
 }

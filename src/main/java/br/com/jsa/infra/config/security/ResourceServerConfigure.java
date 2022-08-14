@@ -17,7 +17,7 @@ public class ResourceServerConfigure extends ResourceServerConfigurerAdapter {
 		http.sessionManagement()
     	.sessionCreationPolicy(SessionCreationPolicy.NEVER)
 			.and().authorizeRequests()
-            .antMatchers("/funcionario/publico/**").permitAll()// ACESSO PUBLICO PARA SEM AUTENTICACAO
+            .antMatchers("/usuario/publico/**").permitAll()// ACESSO PUBLICO PARA SEM AUTENTICACAO
             .antMatchers("/swagger**").permitAll()
             .antMatchers("/springfox**").permitAll()
             .antMatchers("/v2/api-docs").permitAll()

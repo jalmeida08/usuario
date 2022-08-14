@@ -1,16 +1,18 @@
 package br.com.jsa.api.dto;
 
-public abstract class UsuarioForm {
+import br.com.jsa.dominio.model.Usuario;
 
-	private String nome;
+public class UsuarioForm {
+
+	private String pessoaId;
 	private String email;
 
-	public String getNome() {
-		return nome;
+	public String getPessoaId() {
+		return pessoaId;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setPessoaId(String pessoaId) {
+		this.pessoaId = pessoaId;
 	}
 
 	public String getEmail() {
@@ -21,4 +23,16 @@ public abstract class UsuarioForm {
 		this.email = email;
 	}
 
+	@Override
+	public String toString() {
+		return "UsuarioForm [pessoaId=" + pessoaId + ", email=" + email + "]";
+	}
+
+	public Usuario toUsuario() {
+		var u = new Usuario();
+		u.setEmail(this.email);
+		u.setPessoaId(pessoaId);
+		return u;
+	}
+	
 }

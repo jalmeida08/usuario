@@ -1,11 +1,11 @@
-package br.com.jsa.infra.repository;
+package br.com.jsa.dominio.repository;
 
 import java.util.Optional;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import br.com.jsa.infra.model.Usuario;
+import br.com.jsa.dominio.model.Usuario;
 
 @Repository
 public interface UsuarioRepository extends MongoRepository<Usuario, String>{

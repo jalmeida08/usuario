@@ -1,6 +1,6 @@
 package br.com.jsa.api.form;
 
-import br.com.jsa.infra.model.Acesso;
+import br.com.jsa.dominio.model.Acesso;
 
 public class AcessoForm {
 	

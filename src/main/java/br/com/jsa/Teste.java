@@ -1,9 +1,30 @@
 package br.com.jsa;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import static java.nio.charset.StandardCharsets.UTF_8;
+
+import java.io.IOException;
+
 public class Teste {
 	
 	public static void main(String[] args) {
 		
+		try {
+			var path = Path.of("src/main/resources/META-INF/teste.html");
+//			System.out.println(path.toAbsolutePath());
+			var file = Files.readString(path.toAbsolutePath(), UTF_8);
+//			System.out.println(file);
+//			System.out.println(file.contains("${LINK}"));
+//			System.out.println(file.replace("${LINK}", "https://www.aquivaiseulink.com.br/foice/vaice"));
+			System.out.println(new BCryptPasswordEncoder().encode("123123"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 //		var lst = List.of("Ana Clara", "Mirele", "Jefferson", "Manoel", "Rita");
 //		
